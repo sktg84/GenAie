@@ -1,0 +1,406 @@
+<h1> Test Plan for the FS : TEST SFS </h1
+
+<i>Test GenAie Testplan powered by Google Gemini</i>
+
+<h3>Testcase ID: 1.1</h3>
+<h4>Testcase Title</h4>
+<p>Verify PSN end-to-end functionality</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected to different PSN nodes</li>
+<li>One host running AHIP, the other running X.25</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Establish a connection between the two hosts</li>
+<li>Exchange data between the hosts</li>
+<li>Close the connection</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The connection is established successfully</li>
+<li>Data is exchanged successfully</li>
+<li>The connection is closed successfully</li>
+</ul>
+<h3>Testcase ID: 1.2</h3>
+<h4>Testcase Title</h4>
+<p>Verify PSN end-to-end functionality with different data rates</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected to different PSN nodes</li>
+<li>One host running AHIP, the other running X.25</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Establish a connection between the two hosts</li>
+<li>Exchange data between the hosts at different data rates</li>
+<li>Close the connection</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The connection is established successfully</li>
+<li>Data is exchanged successfully at all data rates</li>
+<li>The connection is closed successfully</li>
+</ul>
+<h3>Testcase ID: 1.3</h3>
+<h4>Testcase Title</h4>
+<p>Verify PSN end-to-end functionality with different packet sizes</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected to different PSN nodes</li>
+<li>One host running AHIP, the other running X.25</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Establish a connection between the two hosts</li>
+<li>Exchange data between the hosts using different packet sizes</li>
+<li>Close the connection</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The connection is established successfully</li>
+<li>Data is exchanged successfully using all packet sizes</li>
+<li>The connection is closed successfully</li>
+</ul>
+<h3>Testcase ID: 1.4</h3>
+<h4>Testcase Title</h4>
+<p>Verify PSN end-to-end functionality with different congestion levels</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected to different PSN nodes</li>
+<li>One host running AHIP, the other running X.25</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Establish a connection between the two hosts</li>
+<li>Generate different levels of congestion on the network</li>
+<li>Exchange data between the hosts</li>
+<li>Close the connection</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The connection is established successfully</li>
+<li>Data is exchanged successfully at all congestion levels</li>
+<li>The connection is closed successfully</li>
+</ul>
+<h3>Testcase ID: 1.5</h3>
+<h4>Testcase Title</h4>
+<p>Verify PSN end-to-end functionality with different error rates</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected to different PSN nodes</li>
+<li>One host running AHIP, the other running X.25</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Establish a connection between the two hosts</li>
+<li>Generate different levels of error rates on the network</li>
+<li>Exchange data between the hosts</li>
+<li>Close the connection</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The connection is established successfully</li>
+<li>Data is exchanged successfully at all error rates</li>
+<li>The connection is closed successfully</li>
+</ul>
+<h3>Testcase ID: 2.1</h3>
+<h4>Testcase Title</h4>
+<p>Verify EE module is present in PSN Release 7.0</p>
+<h4>Test Topology</h4>
+<ul>
+<li>One PSN running Release 7.0</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Connect to the PSN using a terminal emulator.</li>
+<li>Enter the "show version" command.</li>
+<li>Verify that the output includes a line that says "EE module: present".</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The output of the "show version" command includes a line that says "EE module: present".</li>
+</ul>
+<h3>Testcase ID: 2.2</h3>
+<h4>Testcase Title</h4>
+<p>Verify old EE is not present in PSN Release 7.0</p>
+<h4>Test Topology</h4>
+<ul>
+<li>One PSN running Release 7.0</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Connect to the PSN using a terminal emulator.</li>
+<li>Enter the "show version" command.</li>
+<li>Verify that the output does not include a line that says "Old EE module: present".</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The output of the "show version" command does not include a line that says "Old EE module: present".</li>
+</ul>
+<h3>Testcase ID: 2.3</h3>
+<h4>Testcase Title</h4>
+<p>Verify NOC can control which EE is running on a PSN</p>
+<h4>Test Topology</h4>
+<ul>
+<li>One PSN running Release 7.0</li>
+<li>One NOC workstation</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>On the NOC workstation, connect to the PSN using a management tool.</li>
+<li>Navigate to the EE configuration page.</li>
+<li>Select the "New EE" or "Old EE" option.</li>
+<li>Click the "Apply" button.</li>
+<li>Verify that the EE on the PSN changes to the selected option.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The NOC can successfully control which EE is running on the PSN.</li>
+</ul>
+<h3>Testcase ID: 2.4</h3>
+<h4>Testcase Title</h4>
+<p>Verify EE can establish a connection with a host</p>
+<h4>Test Topology</h4>
+<ul>
+<li>One PSN running Release 7.0</li>
+<li>One host</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>On the host, start a TCP server on port 80.</li>
+<li>On the PSN, enter the "connect" command to the host's IP address and port 80.</li>
+<li>Verify that the connection is established successfully.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The EE can successfully establish a connection with the host.</li>
+</ul>
+<h3>Testcase ID: 3.1</h3>
+<h4>Testcase Title</h4>
+<p>Validate PSN interoperability between hosts running old EE and hosts running new EE</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two PSNs, one running the old EE and one running the new EE</li>
+<li>Hosts connected to both PSNs</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Send packets from hosts on the old EE PSN to hosts on the new EE PSN.</li>
+<li>Send packets from hosts on the new EE PSN to hosts on the old EE PSN.</li>
+<li>Verify that packets are successfully received and processed by hosts on both PSNs.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>Packets are successfully received and processed by hosts on both PSNs.</li>
+</ul>
+<h3>Testcase ID: 3.2</h3>
+<h4>Testcase Title</h4>
+<p>Validate PSN functionality reverts to PSN 6.0 when old EE is running</p>
+<h4>Test Topology</h4>
+<ul>
+<li>PSN running the old EE</li>
+<li>Hosts connected to the PSN</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Send packets between hosts on the PSN.</li>
+<li>Verify that packets are successfully received and processed by hosts on the PSN.</li>
+<li>Verify that the functionality of the PSN is equivalent to that of PSN 6.0.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>Packets are successfully received and processed by hosts on the PSN.</li>
+<li>The functionality of the PSN is equivalent to that of PSN 6.0.</li>
+</ul>
+<h3>Testcase ID: 4.1</h3>
+<h4>Testcase Title</h4>
+<p>Verify AHIP can be used to establish a connection between two hosts</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected to an IMP</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Host A sends a connection request message to Host B</li>
+<li>Host B receives the connection request message and sends a connection accept message to Host A</li>
+<li>Host A and Host B exchange data messages</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The connection between Host A and Host B is successfully established</li>
+<li>Host A and Host B can exchange data messages</li>
+</ul>
+<h3>Testcase ID: 4.2</h3>
+<h4>Testcase Title</h4>
+<p>Verify AHIP can be used to transfer a file from one host to another</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected to an IMP</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Host A sends a file transfer request message to Host B</li>
+<li>Host B receives the file transfer request message and sends a file transfer accept message to Host A</li>
+<li>Host A sends the file to Host B</li>
+<li>Host B receives the file</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The file is successfully transferred from Host A to Host B</li>
+</ul>
+<h3>Testcase ID: 4.3</h3>
+<h4>Testcase Title</h4>
+<p>Verify AHIP can be used to support multiple concurrent connections between two hosts</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected to an IMP</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Host A sends a connection request message to Host B</li>
+<li>Host B receives the connection request message and sends a connection accept message to Host A</li>
+<li>Host A sends a second connection request message to Host B</li>
+<li>Host B receives the second connection request message and sends a second connection accept message to Host A</li>
+<li>Host A and Host B exchange data messages on both connections</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The two connections between Host A and Host B are successfully established</li>
+<li>Host A and Host B can exchange data messages on both connections</li>
+</ul>
+<h3>Testcase ID: 5.1</h3>
+<h4>Testcase Title</h4>
+<p>Verify throughput with increased network traffic</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Multiple hosts sending and receiving data over the network</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Configure the network with a high volume of traffic.</li>
+<li>Monitor the network throughput using a network monitoring tool.</li>
+<li>Verify that the throughput meets the expected requirements.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The network throughput meets or exceeds the expected requirements.</li>
+</ul>
+<h3>Testcase ID: 5.2</h3>
+<h4>Testcase Title</h4>
+<p>Verify protocol traffic overhead</p>
+<h4>Test Topology</h4>
+<ul>
+<li>A host sending and receiving data over the network using AHIP</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Configure the network with AHIP as the host interface protocol.</li>
+<li>Monitor the network traffic using a network monitoring tool.</li>
+<li>Verify that the protocol traffic overhead is minimal.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The protocol traffic overhead is less than 5% of the total network traffic.</li>
+</ul>
+<h3>Testcase ID: 5.3</h3>
+<h4>Testcase Title</h4>
+<p>Verify network transport services for AHIP</p>
+<h4>Test Topology</h4>
+<ul>
+<li>A host sending and receiving data over the network using AHIP</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Configure the network with AHIP as the host interface protocol.</li>
+<li>Verify that the host can send and receive data successfully.</li>
+<li>Verify that the host can access all of the network services.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The host can send and receive data successfully.</li>
+<li>The host can access all of the network services.</li>
+</ul>
+<h3>Testcase ID: 5.4</h3>
+<h4>Testcase Title</h4>
+<p>Verify network transport services for X.25</p>
+<h4>Test Topology</h4>
+<ul>
+<li>A host sending and receiving data over the network using X.25</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Configure the network with X.25 as the host interface protocol.</li>
+<li>Verify that the host can send and receive data successfully.</li>
+<li>Verify that the host can access all of the network services.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The host can send and receive data successfully.</li>
+<li>The host can access all of the network services.</li>
+</ul>
+<h3>Testcase ID: 5.5</h3>
+<h4>Testcase Title</h4>
+<p>Verify adjustable link unit size</p>
+<h4>Test Topology</h4>
+<ul>
+<li>A host sending and receiving data over the network using AHIP</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Configure the network with AHIP as the host interface protocol.</li>
+<li>Adjust the link unit size.</li>
+<li>Verify that the network performance is not significantly affected.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The network performance is not significantly affected by the change in link unit size.</li>
+</ul>
+<h3>Testcase ID: 6.1</h3>
+<h4>Testcase Title</h4>
+<p>Verify that the new EE window facility allows for more than 8 outstanding messages between any host pair.</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected by a network with satellite trunking.</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Send a series of messages from one host to the other.</li>
+<li>Verify that more than 8 messages are outstanding at the same time.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The messages are successfully sent and received.</li>
+</ul>
+<h3>Testcase ID: 6.2</h3>
+<h4>Testcase Title</h4>
+<p>Verify that the new EE window facility improves throughput on a network with satellite trunking.</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected by a network with satellite trunking.</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Measure the throughput of the network using the old EE window facility.</li>
+<li>Measure the throughput of the network using the new EE window facility.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The throughput of the network is improved using the new EE window facility.</li>
+</ul>
+<h3>Testcase ID: 6.3</h3>
+<h4>Testcase Title</h4>
+<p>Verify that the new EE window facility does not impact throughput on a network without satellite trunking.</p>
+<h4>Test Topology</h4>
+<ul>
+<li>Two hosts connected by a network without satellite trunking.</li>
+</ul>
+<h4>Test Procedure</h4>
+<ol>
+<li>Measure the throughput of the network using the old EE window facility.</li>
+<li>Measure the throughput of the network using the new EE window facility.</li>
+</ol>
+<h4>Pass Criteria</h4>
+<ul>
+<li>The throughput of</li>
+</ul>
