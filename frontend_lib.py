@@ -54,7 +54,7 @@ def get_fsdocument():
             unsafe_allow_html=True,
         )
         st.markdown(
-            "<span style='font-size:12px;'>Author: Karthik Subramanian(ksubram2@cisco.com)</span>",
+            "<span style='font-size:12px;'>Author: Karthik Subramanian(skarthik.email@gmail.com)</span>",
             unsafe_allow_html=True,
         )
         st.divider()
