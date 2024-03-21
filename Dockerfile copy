@@ -1,0 +1,31 @@
+# Use the specified image as the base
+FROM mcr.microsoft.com/devcontainers/python:1-3.11-bullseye
+
+# Copy the local 'packages.txt' and 'requirements.txt' to the container (if they exist)
+# It's assumed that these files are in the same directory as the Dockerfile
+COPY requirements.txt* /tmp/
+COPY *.py /tmp
+
+# Run update and install packages from 'packages.txt' if the file is present
+RUN if [ -f "/tmp/packages.txt" ]; then \
+    apt-get update && \
+    apt-get upgrade -y && \
+    xargs apt-get install -y < /tmp/packages.txt; \
+    fi
+
+# Install Python dependencies from 'requirements.txt' if the file is present
+RUN if [ -f "/tmp/requirements.txt" ]; then \
+    pip3 install --user -r /tmp/requirements.txt; \
+    fi
+
+# Install Streamlit
+RUN pip3 install --user streamlit
+
+# Inform Docker that the container listens on port 8501 at runtime.
+EXPOSE 8501
+
+# The command to run when the container starts
+#docker run -p 8501:8501 autogentestcases:latest tail -f /bin/bash
+#bash
+#cd /tmp
+#streamlit run  streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false
